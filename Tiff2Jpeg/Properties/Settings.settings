@@ -1,7 +1,45 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tiff2Jpeg.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="inFold" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\in</Value>
+    </Setting>
+    <Setting Name="outFold" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\out</Value>
+    </Setting>
+    <Setting Name="chkOverwrite" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="inWater" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\out</Value>
+    </Setting>
+    <Setting Name="outWater" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C://outWater</Value>
+    </Setting>
+    <Setting Name="sansWater" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\out</Value>
+    </Setting>
+    <Setting Name="avWater" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\outWater</Value>
+    </Setting>
+    <Setting Name="pngWater" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\out\\watermark.png</Value>
+    </Setting>
+    <Setting Name="chkOverWater" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="compression" Type="System.String" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="dimension" Type="System.String" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="prefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="suffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">_80</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
