@@ -317,8 +317,10 @@ namespace Tiff2Jpeg
                         pngWatermark = jpgFile;
                     }
 
-                    using (Image image = Image.FromFile(jpgFile))
+                    using (Image imageOri = Image.FromFile(jpgFile))
+                    using (Image image = convert("path", imageOri))
                     using (Image watermarkImage = Image.FromFile(pngWatermark))
+                   // using (Graphics imageGraphics = convert("path",image))
                     using (Graphics imageGraphics = Graphics.FromImage(image))
                     using (TextureBrush watermarkBrush = new TextureBrush(watermarkImage))
                     {
@@ -381,7 +383,42 @@ namespace Tiff2Jpeg
             btnCreateWater.Text = "Watermarking";
             btOutputFolder.Enabled = btTiffFile.Enabled = true;
         }
-      
+
+
+        private Image convert(string pImagePath, Image pImage)
+        {
+
+            Graphics g;
+            Image ImageToConvert = new Bitmap(pImage);
+            ImageAttributes ImageAttributes = new ImageAttributes();
+            int width = ImageToConvert.Width;
+            int height = ImageToConvert.Height;
+            float[][] GrayShear = new float[][] { new float[] { 0.5f, 0.5f, 0.5f, 0f, 0f}, 
+                      new float[] { 0.5f, 0.5f, 0.5f, 0f, 0f}, 
+             new float[] { 0.5f, 0.5f, 0.5f, 0f, 0f}, 
+             new float[] { 0, 0, 0, 1, 0}, 
+             new float[] { 0, 0, 0, 0, 1}                        };
+
+
+        ColorMatrix colMatrix = new ColorMatrix(GrayShear);
+
+
+        ImageAttributes.SetColorMatrix(colMatrix, ColorMatrixFlag.Default, 
+        ColorAdjustType.Bitmap);
+
+
+    g = Graphics.FromImage(ImageToConvert);
+
+            g.DrawImage(ImageToConvert, 
+            new Rectangle(0, 0, width, height), 0, 0, 
+            width, height, GraphicsUnit.Pixel, ImageAttributes);
+
+            return ImageToConvert;
+            //g.Dispose();
+            //return g;
+}
+
+
     }
 
     public class MyUserState

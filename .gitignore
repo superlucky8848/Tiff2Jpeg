@@ -172,3 +172,7 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+Tiff2Jpeg/.vs/Tiff2Jpeg/v16/Server/sqlite3/storage.ide-wal
+Tiff2Jpeg/.vs/Tiff2Jpeg/v16/Server/sqlite3/storage.ide-shm
+Tiff2Jpeg/.vs/Tiff2Jpeg/v16/Server/sqlite3/storage.ide
+Tiff2Jpeg/.vs/Tiff2Jpeg/v16/Server/sqlite3/db.lock
